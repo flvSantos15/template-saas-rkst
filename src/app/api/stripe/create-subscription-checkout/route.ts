@@ -24,6 +24,8 @@ export async function POST(req: NextRequest) {
 
   const metadata = {
     testId,
+    price,
+    userId,
   };
 
   // Criar um usuário no Stripe para ter referencia no portal
@@ -46,7 +48,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    return NextResponse.json({ url: session.url });
+    return NextResponse.json({ sessionId: session.id });
   } catch (error) {
     console.log(error);
     return NextResponse.error();

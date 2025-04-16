@@ -26,7 +26,7 @@ export function useStripe() {
 
       const data = await response.json();
 
-      await stripe.redirectToCheckout({ sessionId: data.id });
+      await stripe.redirectToCheckout({ sessionId: data.sessionId });
     } catch (error) {
       console.log(error);
     }
@@ -46,7 +46,7 @@ export function useStripe() {
 
       const data = await response.json();
 
-      await stripe.redirectToCheckout({ sessionId: data.id });
+      await stripe.redirectToCheckout({ sessionId: data.sessionId });
     } catch (error) {
       console.log(error);
     }
