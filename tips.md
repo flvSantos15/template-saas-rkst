@@ -1,8 +1,9 @@
 ## tecnologias:
 
-- ReactJS19
-- NextJS15
+- ReactJS
+- NextJS
 - Firebase-Admin
 - NextAuthJS
 - TailwindCSS
 - Server Components
+- Stripe
