@@ -12,6 +12,7 @@
     "@auth/firebase-adapter": "^2.8.0",
     "@stripe/stripe-js": "^7.1.0",
     "firebase-admin": "^12.6.0",
+    "mercadopago": "^2.4.0",
     "next": "15.3.0",
     "next-auth": "^5.0.0-beta.25",
     "react": "^19.0.0",

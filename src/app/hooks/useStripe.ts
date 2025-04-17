@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { loadStripe, Stripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react";
 
@@ -12,7 +11,7 @@ export function useStripe() {
     setStripe(stripeInstance);
   }
 
-  async function createPaymentStripeCheckout(checkoutData: any) {
+  async function createPaymentStripeCheckout(checkoutData: { testId: string }) {
     if (!stripe) return;
 
     try {
@@ -32,7 +31,9 @@ export function useStripe() {
     }
   }
 
-  async function createSubscriptionStripeCheckout(checkoutData: any) {
+  async function createSubscriptionStripeCheckout(checkoutData: {
+    testId: string;
+  }) {
     if (!stripe) return;
 
     try {
