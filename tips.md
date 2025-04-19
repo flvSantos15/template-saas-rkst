@@ -7,3 +7,5 @@
 - TailwindCSS
 - Server Components
 - Stripe
+- Mercado Pago APi
+- Resend API
