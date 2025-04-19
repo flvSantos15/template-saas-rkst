@@ -1,6 +1,14 @@
 import { handleAuth } from "@/app/actions/handle-auth";
+import { auth } from "@/app/lib/auth";
+import { redirect } from "next/navigation";
 
-export default function Login() {
+export default async function Login() {
+  const session = await auth();
+
+  if (session?.user) {
+    redirect("/dashboard");
+  }
+
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <form action={handleAuth}>

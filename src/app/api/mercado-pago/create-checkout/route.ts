@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     const createdPreference = await preference.create({
       body: {
         external_reference: testId,
-        metadata: { testId },
+        metadata: { testId, userEmail },
         ...(userEmail && { payer_email: userEmail }),
         items: [
           {
